@@ -1,0 +1,23 @@
+{
+  "name": "login_backend__api_node_express_jwt",
+  "version": "1.0.0",
+  "description": "## Criando API do zero com Node e Express - Passo a Passo",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.19.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^3.1.7"
+  },
+  "devDependencies": {
+    "prisma": "^5.19.1"
+  }
+}

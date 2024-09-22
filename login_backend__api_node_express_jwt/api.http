@@ -1,0 +1,55 @@
+GET http://localhost:3000/usuarios
+
+### BLOCO ACIMA: lista todos os usuarios
+
+POST http://localhost:3000/cadastro
+Content-Type: application/json
+
+{
+    "name" : "Gustavo",
+    "email" : "gustavo@gmail.com",
+    "password" : "123@123"
+}
+
+### BLOCO ACIMA: cadastra novo usuario
+
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title" : "Novo evento 2",
+    "details" : "",
+    "maximumAttendees" : 1
+}
+
+### BLOCO ACIMA: cadastra novo evento
+
+POST http://localhost:3333/events/1e943c50-bc5c-4979-a78d-4b531e2bb08d/attendees
+Content-Type: application/json
+
+{
+    "name" : "Gustavo Rodrigues",
+    "email" : "gustavo@lins.sp.gov.br"
+}
+
+### BLOCO ACIMA: cadastra novo participante em um evento, passando o ID do evento
+
+GET http://localhost:3333/events/1e943c50-bc5c-4979-a78d-4b531e2bb08d
+
+### BLOCO ACIMA: seleciona informacoes do evento passando o seu ID
+
+GET http://localhost:3333/attendees/6/badge
+
+### BLOCO ACIMA: seleciona informacoes de um participante, passando o seu ID. Obtem-se tambem a URL para que ele faca ckeck-in (usado pelo QRCode)
+
+GET http://localhost:3333/attendees/2/check-in
+
+### BLOCO ACIMA: realiza o check-in do participante passando o seu ID
+
+GET http://localhost:3333/events/75d1c90c-aaba-4ff0-96b2-84449fbd3434/attendees
+
+### BLOCO ACIMA: seleciona todos os participantes de um dado evento, passando o ID desse evento
+
+GET http://localhost:3333/events/75d1c90c-aaba-4ff0-96b2-84449fbd3434/attendees?query=gus
+
+### BLOCO ACIMA: seleciona os partipantes passando parte do nome deles para pesquisa
