@@ -30,7 +30,7 @@ Como solucao, para rodar o nodemon, utilizamos o comando abaixo, que chama o nod
 `npm add mysql`
 
 
-# NAO CONSEGUIMOS CONECTAR O PRISMA COM O BANCO DE DADOS 
+# --- NAO CONSEGUIMOS CONECTAR O PRISMA COM O BANCO DE DADOS - BEGIN ---
 ## PRISMA
 `npm install prisma --save-dev`
 ### PRISMA - a linha de comando abaixo ira criar o arquivo de configuracao do PRISMA
@@ -50,3 +50,11 @@ Quando pedir "Enter a name for the new migration: ", informe o que acabou de cri
 `npx prisma studio`
 Ele disponibiliza no navegador a visualizacao do BD o que, para nos, foi disponibilizado atraves da URL abaixo:
 `https://localhost:5555`
+
+# --- NAO CONSEGUIMOS CONECTAR O PRISMA COM O BANCO DE DADOS - END -----
+
+## BCRYPT
+`npm install bcrypt`
+
+## JWT - JSON WEB TOKEN
+`npm install jsonwebtoken`
