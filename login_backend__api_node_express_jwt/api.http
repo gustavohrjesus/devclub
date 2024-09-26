@@ -4,9 +4,10 @@ GET http://localhost:3000/usuarios
 
 POST http://localhost:3000/cadastro
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywicGVyZmlsIjoyLCJpYXQiOjE3MjczNTU3OTQsImV4cCI6MTcyNzM1NTkxNH0.pyFU3ZrsgqYi0m7OY6WLrR4HOz44EaTiOKAZobTlyBg
 
 {
-    "email" : "regis@gmail.com",
+    "email" : "vitor@gmail.com",
     "password" : "123@123",
     "nivelacesso" : 1,
     "ativo" : "s"
@@ -26,7 +27,7 @@ Content-Type: application/json
 
 GET http://localhost:3000/listar-usuarios
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzI3Mjc4OTgxLCJleHAiOjE3MjcyNzkwNDF9.GvZEnEnGmcdIEYQHF0BXkKE1VjfX7nOU9JEHxOfCCWA
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywicGVyZmlsIjoyLCJpYXQiOjE3MjczNTU3OTQsImV4cCI6MTcyNzM1NTkxNH0.pyFU3ZrsgqYi0m7OY6WLrR4HOz44EaTiOKAZobTlyBg
 
 ### BLOCO ACIMA: PRIVATE ROUTE (com token ) - LISTA TODOS os usuarios
 ### Pode-se passar o token, tambem, conforme abaixo:

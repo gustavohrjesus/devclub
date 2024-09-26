@@ -2,11 +2,11 @@ import jwt from 'jsonwebtoken'
 
 const JWT_SECRET = process.env.SECRET
 
-const auth = (req, res, next) => {    
-    console.log('-- PERFIL 2 -- OPERADOR -- AUTH.JS --')
+const authAdmin = (req, res, next) => {
+    console.log('-- PERFIL 1 -- ADMIN -- AUTHADMIN.JS --')
     // console.log(req)
-    const token  = req.headers.authorization
-    
+
+    const token = req.headers.authorization
 
     if(!token){
         return res.status(401).json({ message: "Acesso negado!" })
@@ -15,13 +15,11 @@ const auth = (req, res, next) => {
     try {
         const decoded = jwt.verify( token.replace( 'Bearer ', '' ), JWT_SECRET )
         req.userId = decoded.id
-        req.perfil = decoded.perfil
 
-        if(req.perfil > 2){
-            return res.status(401).json({ message: "Funcao ADMIN-OPERADOR!" })
+        if( decoded.perfil !== 1 ){
+            return res.status(401).json({ message: "Funcao somente ADMIN!" })
         }
-
-        console.log( req.userId, req.perfil )
+        console.log( req.userId )
         next()
 
     } catch(err) {
@@ -29,4 +27,4 @@ const auth = (req, res, next) => {
     }    
 }
 
-export default auth
+export default authAdmin
