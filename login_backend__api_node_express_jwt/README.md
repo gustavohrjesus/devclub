@@ -58,3 +58,7 @@ Ele disponibiliza no navegador a visualizacao do BD o que, para nos, foi disponi
 
 ## JWT - JSON WEB TOKEN
 `npm install jsonwebtoken`
+
+
+# INSTALANDO O CORS NO BACKEND PARA QUE O FRONTEND POSSA ACESSA-LO
+`npm install cors`

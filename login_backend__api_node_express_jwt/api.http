@@ -4,30 +4,40 @@ GET http://localhost:3000/usuarios
 
 POST http://localhost:3000/cadastro
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywicGVyZmlsIjoyLCJpYXQiOjE3MjczNTU3OTQsImV4cCI6MTcyNzM1NTkxNH0.pyFU3ZrsgqYi0m7OY6WLrR4HOz44EaTiOKAZobTlyBg
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicGVyZmlsIjozLCJpYXQiOjE3MjczNTgzMDgsImV4cCI6MTcyNzM1ODQyOH0.VH6C44nRBrnhPSuSnIRxy-Dx4FFqf0W0pWEUZQqSR04
 
 {
     "email" : "vitor@gmail.com",
     "password" : "123@123",
-    "nivelacesso" : 1,
+    "nivelacesso" : 2,
     "ativo" : "s"
 }
 
-### BLOCO ACIMA: PUBLIC ROUTE (sem tokne) - CADASTRA novo usuario
+### BLOCO ACIMA: PRIVATE ROUTE (com token) - CADASTRA novo usuario - PERFIL ADMIN
 
 POST http://localhost:3000/login
 Content-Type: application/json
 
 {
-    "email" : "regis@gmail.com",
+    "email" : "saulo@gmail.com",
     "password" : "123@123"
 }
 
-### BLOCO ACIMA: PUBLIC ROUTE (sem tokne) - LOGIN de usuario
+### BLOCO ACIMA: PRIVATE ROUTE (com token) - LOGIN de usuario - PERFIL OPERADOR
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email" : "gustavo@gmail.com",
+    "password" : "123456789"
+}
+
+### BLOCO ACIMA: PRIVATE ROUTE (com token) - LOGIN de usuario - PERFIL ADMIN
 
 GET http://localhost:3000/listar-usuarios
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywicGVyZmlsIjoyLCJpYXQiOjE3MjczNTU3OTQsImV4cCI6MTcyNzM1NTkxNH0.pyFU3ZrsgqYi0m7OY6WLrR4HOz44EaTiOKAZobTlyBg
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicGVyZmlsIjoyLCJpYXQiOjE3Mjg1MDQyNjYsImV4cCI6MTcyODUwNDM4Nn0.SrFX-9oXO6PtLyp1kAsronMjYW36HQO12jiBy8Ymof8
 
 ### BLOCO ACIMA: PRIVATE ROUTE (com token ) - LISTA TODOS os usuarios
 ### Pode-se passar o token, tambem, conforme abaixo:
