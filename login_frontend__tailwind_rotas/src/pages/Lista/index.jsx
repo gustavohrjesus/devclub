@@ -20,16 +20,16 @@ function ListarUsuarios(){
     }, [])
 
     return (
-        <div>
-            <h2>Lista de Usuarios</h2>
-            <ul>
+        <div className="max-w-2xl mx-auto mt-10 bg-white p-8 border border-gray-300 rounded-md shadow-lg">
+            <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Lista de Usuarios</h2>
+            <ul className="space-y-2">
                 {/* o primeiro allUsers verifica se "allUsers" tem informacao (if(allUsers)) */}
                 { allUsers && allUsers.length > 0 && allUsers.map( (user) => (
-                    <li key={ user.idusuarios }>
-                        <p>{user.idusuarios}</p>
-                        <p>{user.email}</p>
-                        <p>{user.nivelacesso}</p>
-                        <p>{user.ativo}</p>
+                    <li key={ user.idusuarios } className="bg-gray-100 p-4 rounded-md">
+                        <p className="font-semibold">ID: {user.idusuarios}</p>
+                        <p className="font-semibold">E-mail: {user.email}</p>
+                        <p className="font-semibold">Nivel de Acesso (1/2): {user.nivelacesso}</p>
+                        <p className="font-semibold">Ativo (s/n): {user.ativo}</p>
                     </li>
                 ))}
             </ul>
