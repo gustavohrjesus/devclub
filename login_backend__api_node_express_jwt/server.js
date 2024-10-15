@@ -4,8 +4,8 @@ import express from 'express'
 import cors from 'cors'
 
 import publicRoutes from  './routes/public.js'
-import privateRoutes from './routes/private.js'
 import privateRoutesView from './routes/privateView.js'
+import privateRoutes from './routes/private.js'
 
 import auth from './middlewares/auth.js'
 import authAdmin from './middlewares/authAdmin.js'
